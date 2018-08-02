@@ -17,7 +17,7 @@ class Authentication:
             state = self.state_list[0]
         chat_id = message.chat.id
         # Check File users/972345
-        with open(self.path_file + str(chat_id), 'w', encoding='utf-8') as f:
+        with open(self.path_file + str(chat_id), 'w', encoding='utf-8-sig') as f:
             f.write(str(state))
         
     def set_state_list(self, state_list):
@@ -26,7 +26,7 @@ class Authentication:
     def get_state(self, message):
         chat_id = message.chat.id
         try:
-            with open(self.path_file + str(chat_id), 'r', encoding='utf-8') as f:
+            with open(self.path_file + str(chat_id), 'r', encoding='utf-8-sig') as f:
                 lines = f.readlines()
                 state = lines[0].strip()
             return state

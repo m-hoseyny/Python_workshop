@@ -1,3 +1,6 @@
 *.png
 *.jpg
 *.fbr
+*.docx
+*.xlsx
+*.pyc
